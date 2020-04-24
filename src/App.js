@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import "./views/components/Button/Button.css";
+import ButtonUI from "./views/components/Button/Button";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1> App Js</h1>
+        <ButtonUI>Button</ButtonUI>
+        <ButtonUI type="outlined">Button</ButtonUI>
+        <ButtonUI type="textual">Button</ButtonUI>
+      </div>
+    );
+  }
 }
 
 export default App;
